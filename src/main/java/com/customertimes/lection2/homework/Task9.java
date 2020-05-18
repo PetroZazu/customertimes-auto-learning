@@ -11,14 +11,14 @@ Do not use build-in methods to sort the array.
 public class Task9 {
     public static void main(String[] args) {
         Random rand = new Random();
-        int[] arr = {4, 4, 5, 5, 6, 6, 6, 6, 1, 1, 2, 2, 3, 4, 5, 6, 9, 1, 1, 2, 2, 3};
+        int[] arr = new int[10];
         int t;
         int y = 1;
-        /*for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
             arr[i] = rand.nextInt(20);
             System.out.print(arr[i] + " ");
         }
-        System.out.println();*/
+        System.out.println();
 
         for (int k = 0; k < arr.length; k++) {
             for (int i = y; i < arr.length; i++) {
