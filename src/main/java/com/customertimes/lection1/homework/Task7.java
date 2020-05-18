@@ -3,7 +3,7 @@ package com.customertimes.lection1.homework;
 /*
 7) Create an array of 10 integers. Initialize this array with any values except 0. Print the length of the array to a console.
  */
-public class task7 {
+public class Task7 {
     public static void main(String[] args) {
         int[] arr = new int[10];
         for (int i = 0; i < arr.length; i++) {

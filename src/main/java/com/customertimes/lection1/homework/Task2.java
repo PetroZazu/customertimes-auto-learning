@@ -3,7 +3,7 @@ package com.customertimes.lection1.homework;
 2) Write a program which creates and initializes all primitive data types.
 Remark: There are 8 primitive data types.
  */
-public class task2 {
+public class Task2 {
 
     public static void main(String[] args) {
         byte b1 = 127;

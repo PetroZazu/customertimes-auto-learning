@@ -2,7 +2,7 @@ package com.customertimes.lection1.homework;
 /*
 6) Create a simple program with several constants. Try to reassign a value for any of them and compile you program. What happened?
  */
-public class task6 {
+public class Task6 {
     public static final int DN = 27;
     public static final boolean YES = true;
 
