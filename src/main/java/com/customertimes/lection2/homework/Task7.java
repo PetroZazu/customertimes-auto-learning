@@ -9,15 +9,17 @@ import java.util.Random;
 public class Task7 {
     public static void main(String[] args) {
         Random rand = new Random();
-        int upperbound = 51;
+        int upperbound = 5;
         int sum = 0;
         int[] arr = new int[10];
-        for (int i = 0; i < arr.length; i++){
+        for (int i = 0; i < arr.length; i++) {
             arr[i] = rand.nextInt(upperbound);
-            sum += arr[i];
+            if (i > 0 && i < arr.length - 1) {
+                sum += arr[i];
+            }
             System.out.println(arr[i]);
         }
-        System.out.println("sum of all array elements is equal: " + sum);
+        System.out.println("sum of array elements except the first one and the last one is: " + sum);
 
     }
 }

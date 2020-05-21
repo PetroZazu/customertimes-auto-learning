@@ -21,7 +21,7 @@ public class Task1 {
         return a * b;
     }
 
-    public static int division(int a, int b) {
+    public static double division(double a, double b) {
         return a / b;
     }
 
@@ -29,6 +29,6 @@ public class Task1 {
         System.out.println("5 + 5 = " + addition(5, 5));
         System.out.println("5 - 5 = " + substruction(5,5));
         System.out.println("5 * 5 = " + multiplication(5, 5));
-        System.out.println("5 / 5 = " + division(5, 5));
+        System.out.println("5 / 6 = " + division(5, 6));
     }
 }

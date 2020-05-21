@@ -14,7 +14,8 @@ public class Task2 {
 
     public static void circleSqrt (int rad){
         rad *= rad;
-        System.out.println("Площа кола = " + 3.16 * rad);
+        double s = Math.PI * rad;
+        System.out.println("Площа кола = " + s);
     }
 
     public static void main(String[] args) {
