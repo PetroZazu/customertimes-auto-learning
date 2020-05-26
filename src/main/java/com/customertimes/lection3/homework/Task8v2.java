@@ -17,7 +17,7 @@ Given a string "Den, John, Will, Kate, Adam, Robin". Print all the names from th
  */
 public class Task8v2 {
     public static void main(String[] args) {
-        String str = "Den, John, Will, Kate, Adam, Robin";
+        String str = "Den, John, Will, Kate, Adam, RobinHood:)";
         char a;
         String b;
         for (int i = 0; i < str.length(); i++) {
