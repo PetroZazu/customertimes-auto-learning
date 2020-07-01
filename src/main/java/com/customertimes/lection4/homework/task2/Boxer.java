@@ -26,10 +26,10 @@ public class Boxer {
 
         if ((anotherBoxer.age + anotherBoxer.strength + anotherBoxer.weight) > (age + weight + strength)) {
             System.out.println("win Boxer 2");
-            return true;
+            return false;
         } else {
             System.out.println("win Boxer 1");
-            return false;
+            return true;
         }
     }
 

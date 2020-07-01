@@ -1,11 +1,15 @@
 package com.customertimes.lection4.homework.task3hasA;
-
 class CarConstructor {
     Model m;
     Engine e;
     Wheels w;
 
-    public void display (Model m, Engine e, Wheels w){
+    public CarConstructor (Model model, Engine engine, Wheels wheels) {
+        m = model;
+        e = engine;
+        w = wheels;
+    }
+    public void display (){
         System.out.println("Model name: " + m.model);
         System.out.println("Year of the Car is: "+ m.year);
         System.out.println("Dors Count: " + m.dorsCount);
@@ -21,11 +25,12 @@ class CarConstructor {
     }
 
     public static void main(String[] args) {
-        CarConstructor BMW = new CarConstructor();
+
         Engine x5Engine = new Engine ("Disel", "3.0L", 6,227);
         Model x5Model = new Model("BMW x5 e53", 2012, 5, 16000);
         Wheels x5Wheels = new Wheels("19x12.5 +45", "300/90R19", "Continental", 4);
-        BMW.display(x5Model, x5Engine, x5Wheels);
+        CarConstructor BMW = new CarConstructor(x5Model, x5Engine, x5Wheels);
+        BMW.display();
 
     }
 }
