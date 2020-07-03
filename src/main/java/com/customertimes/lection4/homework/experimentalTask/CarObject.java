@@ -1,4 +1,4 @@
-package com.customertimes.lection4.homework.ExperimentalTask;
+package com.customertimes.lection4.homework.experimentalTask;
 
 import java.util.ArrayList;
 import java.util.Collections;

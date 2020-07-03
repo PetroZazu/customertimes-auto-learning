@@ -1,4 +1,4 @@
-package com.customertimes.lection4.homework.ExperimentalTask;
+package com.customertimes.lection4.homework.experimentalTask;
 
 public class MainToTestCar {
     public static void main(String[] args) {
