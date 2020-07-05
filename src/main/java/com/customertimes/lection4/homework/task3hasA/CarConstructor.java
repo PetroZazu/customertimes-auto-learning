@@ -5,9 +5,9 @@ class CarConstructor {
     Wheels w;
 
     public CarConstructor (Model model, Engine engine, Wheels wheels) {
-        m = model;
-        e = engine;
-        w = wheels;
+        this.m = model;
+        this.e = engine;
+        this.w = wheels;
     }
     public void display (){
         System.out.println("Model name: " + m.model);
