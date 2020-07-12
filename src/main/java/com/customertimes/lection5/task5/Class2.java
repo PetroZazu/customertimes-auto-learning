@@ -1,6 +1,7 @@
 package com.customertimes.lection5.task5;
 
-public class Class2 {
+public class
+Class2 {
     public Class2 () {
         //Class1 class1 = new Class1(1,2);
         // object of the class can not be created cause the Constructor is private
