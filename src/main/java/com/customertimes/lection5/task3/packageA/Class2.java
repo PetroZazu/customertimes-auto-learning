@@ -4,12 +4,9 @@ package com.customertimes.lection5.task3.packageA;
 class can only be accessed within its own package*/
 
 public class Class2 {
-    public String hello; // - String field with Package Private access
-    public int bro; // - Int field with Package Private access
-
-    public Class2(){
-
-    };
+     String hello; // - String field with Package Private access
+     int bro; // - Int field with Package Private access
+    
 
     Class2(String hello, int bro) {
         this.hello = hello;
