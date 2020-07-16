@@ -1,4 +1,4 @@
-package com.customertimes.lection6.task1;
+package com.customertimes.lection6.task1example1;
 
 public class RocketSpeedAndDestination_B {
 

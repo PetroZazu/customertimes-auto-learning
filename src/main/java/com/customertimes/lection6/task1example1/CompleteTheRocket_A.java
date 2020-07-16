@@ -1,4 +1,4 @@
-package com.customertimes.lection6.task1;
+package com.customertimes.lection6.task1example1;
 
 public class CompleteTheRocket_A {
     //обявляю два обєкта минулих класів з пустими конструкторами
