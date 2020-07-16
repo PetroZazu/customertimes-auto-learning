@@ -6,8 +6,12 @@ public class Class3 extends Class1 {
 
     public Class3() {
         System.out.println("Public member: " + public_m1); // Accessed
-        //System.out.println("Package Private member: " + packagePrivate_m2); // Can not be accessed cause not in the same Package
-        //System.out.println("Private member: " + private_m3); // Can not be accessed cause not in the same Class
+       // System.out.println("Package Private member: " + packagePrivate_m2); // Can not be accessed cause not in the same Package
+       // System.out.println("Private member: " + private_m3); // Can not be accessed cause not in the same Class
         System.out.println("Protected member: " + protected_m4); // Accessed, cause a sub class
-    }
+        Class3 class3 = new Class3();
+        class3.protected_m4 = 3;
+
+            }
 }
+
