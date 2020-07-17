@@ -1,9 +1,9 @@
 package com.customertimes.lection6.task1example2;
 
 public class ElectricVehicle {
-    Batery battery = new Batery();
-    Charger charger = new Charger();
-    Engine engine = new Engine();
+   private Batery battery = new Batery();
+   private Charger charger = new Charger();
+   private Engine engine = new Engine();
 
     private String vehicleModelName;
     private double chargedPercents;
@@ -25,7 +25,7 @@ public class ElectricVehicle {
 
     public void chargeVehicle() {
         System.out.print(vehicleModelName);
-        charger.StartCharge(this.chargedPercents);
+        charger.startCharge(this.chargedPercents);
     }
 
 }
