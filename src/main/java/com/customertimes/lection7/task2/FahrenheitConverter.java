@@ -1,7 +1,5 @@
 package com.customertimes.lection7.task2;
 
-import java.text.DecimalFormat;
-
 public class FahrenheitConverter implements Converter {
     @Override
     public void convert(double fahrenheit) {
