@@ -25,49 +25,61 @@ public class RemoteController implements Volume, Device {
     }
 
     public void connectDevice(TVDevice yourTvDevice) {
-        this.tvDevice = yourTvDevice;
+        System.out.println();
+        if (yourTvDevice.equals(this.tvDevice)) {
+            System.out.println(tvDevice.getModelName() + " device already connected, connect another one please");
+        } else {
+            if (this.tvDevice == null) {
+                this.tvDevice = yourTvDevice;
+                System.out.println(this.tvDevice.getModelName() + " device Connected");
+            } else {
+                System.out.print(this.tvDevice.getModelName() + " device disconnected and new one connected - ");
+                this.tvDevice = yourTvDevice;
+                System.out.println(this.tvDevice.getModelName() + " new device Connected");
+
+            }
+        }
     }
 
     private boolean checkIfDeviceConnected() {
         if (tvDevice != null) {
             return true;
         } else {
-            System.out.println("Error, no devices connected Please, connect any TV device");
+            System.out.println("Error, no devices connected Please, connect TV device to the Remote Controller");
             return false;
         }
     }
 
     @Override
     public void powerOn() {
+        System.out.println();
         if (checkIfDeviceConnected()) {
-            System.out.println("Remote Controller Power On method:");
-            if (this.tvDevice.isOn()) {
+            System.out.print("Remote Controller Power On method:");
+            /*if (this.tvDevice.isOn()) {
                 System.out.println("hey! open your eyes, TV was ON already");
             } else {
                 this.tvDevice.setOn(true);
                 System.out.println("TV ON successfully");
-            }
-            System.out.println();
+            }*/
+            tvDevice.powerOn();
         }
-
     }
 
     @Override
     public void powerOff() {
+        System.out.println();
         if (checkIfDeviceConnected()) {
-            System.out.println("Remote Controller Power Off method:");
-            if (this.tvDevice.isOn()) {
-                this.tvDevice.setOn(false);
-                System.out.println("Допобачення телебачення, TV OFF successfully");
-            } else {
-                System.out.println("hey! open your eyes, TV was OFF already");
-            }
-            System.out.println();
+            tvDevice.powerOff();
         }
     }
 
     @Override
     public void setChannel(int channel) {
+        System.out.println();
+        System.out.print("Remote Controller setChannel method:");
+        if (checkIfDeviceConnected()) {
+            tvDevice.setChannel(channel);
+        }
 
     }
 
