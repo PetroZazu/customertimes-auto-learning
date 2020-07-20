@@ -1,4 +1,8 @@
 package com.customertimes.lection7.task2;
+
+import com.customertimes.lection7.task2rework.FahrenheitConverter;
+import com.customertimes.lection7.task2rework.KelvinConverter;
+
 /*
 Create a new interface "Converter". +
 This interface should have one method "convert(double celsius)". +
