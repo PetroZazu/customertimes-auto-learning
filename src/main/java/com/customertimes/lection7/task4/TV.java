@@ -28,37 +28,37 @@ public class TV extends TVDevice {
 
     @Override
     public void currentChannel() {
-        System.out.println();
         System.out.println("Your current channel is: " + currentChanel);
+        System.out.println();
     }
 
     @Override
     public void powerOn() {
-        System.out.println();
         if (isOn()) {
             System.out.println("hey! open your eyes, TV was ON already");
         } else {
             this.setOn(true);
             System.out.println("TV ON successfully");
         }
+        System.out.println();
     }
 
     @Override
     public void powerOff() {
-        System.out.println();
         if (isOn()) {
             this.setOn(false);
             System.out.println("Допобачення телебачення, TV OFF successfully");
         } else {
             System.out.println("hey! open your eyes, TV was OFF already");
         }
+        System.out.println();
     }
 
     @Override
     public void setChannel(int channel) {
-        System.out.println();
         if (!isOn()) {
             System.out.println("setChannel action can't be performed, TV is OFF");
+            System.out.println();
             return;
         }
         if (channel >= 0 && channel <= 1000) {
@@ -67,13 +67,14 @@ public class TV extends TVDevice {
         } else {
             System.out.println("Invalid channel entered, please choose channel from 0 to 1000 ");
         }
+        System.out.println();
     }
 
     @Override
     public void upVolume() {
-        System.out.println();
         if (!isOn()) {
             System.out.println("upVolume action can't be performed, TV is OFF");
+            System.out.println();
             return;
         }
         if (volumeLevel >= 0 && volumeLevel <= 0) {
@@ -84,13 +85,14 @@ public class TV extends TVDevice {
             System.out.println("You are already reached maximum volume level");
         }
         System.out.println("Current volume level is: " + volumeLevel);
+        System.out.println();
     }
 
     @Override
     public void downVolume() {
-        System.out.println();
         if (!isOn()) {
             System.out.println("downVolume action can't be performed, TV is OFF");
+            System.out.println();
             return;
         }
         if (volumeLevel >= 1 && volumeLevel <= 100) {
@@ -100,16 +102,18 @@ public class TV extends TVDevice {
             System.out.println("You are already reached minimum volume level");
         }
         System.out.println("Current volume level is: " + volumeLevel);
+        System.out.println();
     }
 
     @Override
     public void mute() {
-        System.out.println();
         if (!isOn()) {
             System.out.println("mute action can't be performed, TV is OFF");
+            System.out.println();
             return;
         }
         volumeLevel = 0;
         System.out.println("TV sound muted successfully");
+        System.out.println();
     }
 }

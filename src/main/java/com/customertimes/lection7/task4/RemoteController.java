@@ -26,6 +26,7 @@ public class RemoteController implements Volume, Device {
 
     public void connectDevice(TVDevice yourTvDevice) {
         System.out.println();
+        System.out.println("Remote Controller connectDevice method:");
         if (yourTvDevice.equals(this.tvDevice)) {
             System.out.println(tvDevice.getModelName() + " device already connected, connect another one please");
         } else {
@@ -41,11 +42,24 @@ public class RemoteController implements Volume, Device {
         }
     }
 
+    public void disconnectDevice() {
+        System.out.println();
+        System.out.print("Remote Controller 'disconnectDevice' method:");
+        if (this.tvDevice == null) {
+            System.out.println("There was no devices to disconnect, please connect one to perform action");
+        } else {
+            System.out.println(this.tvDevice.getModelName() + " device disconnected successfully");
+            this.tvDevice = null;
+        }
+    }
+
     private boolean checkIfDeviceConnected() {
+        System.out.println();
         if (tvDevice != null) {
             return true;
         } else {
-            System.out.println("Error, no devices connected Please, connect TV device to the Remote Controller");
+            System.out.println("Remote Controller 'checkIfDeviceConnected' method:");
+            System.out.println("No devices connected, please connect TV device to the Remote Controller");
             return false;
         }
     }
@@ -53,14 +67,8 @@ public class RemoteController implements Volume, Device {
     @Override
     public void powerOn() {
         System.out.println();
+        System.out.print("Remote Controller 'powerOn' method:");
         if (checkIfDeviceConnected()) {
-            System.out.print("Remote Controller Power On method:");
-            /*if (this.tvDevice.isOn()) {
-                System.out.println("hey! open your eyes, TV was ON already");
-            } else {
-                this.tvDevice.setOn(true);
-                System.out.println("TV ON successfully");
-            }*/
             tvDevice.powerOn();
         }
     }
@@ -68,6 +76,7 @@ public class RemoteController implements Volume, Device {
     @Override
     public void powerOff() {
         System.out.println();
+        System.out.print("Remote Controller 'powerOff' method:");
         if (checkIfDeviceConnected()) {
             tvDevice.powerOff();
         }
@@ -76,7 +85,7 @@ public class RemoteController implements Volume, Device {
     @Override
     public void setChannel(int channel) {
         System.out.println();
-        System.out.print("Remote Controller setChannel method:");
+        System.out.print("Remote Controller 'setChannel' method:");
         if (checkIfDeviceConnected()) {
             tvDevice.setChannel(channel);
         }
@@ -85,21 +94,40 @@ public class RemoteController implements Volume, Device {
 
     @Override
     public void currentChannel() {
+        System.out.println();
+        System.out.print("Remote Controller 'currentChannel' method:");
+        if (checkIfDeviceConnected()) {
+            tvDevice.currentChannel();
+        }
 
     }
 
     @Override
     public void upVolume() {
-
+        System.out.println();
+        System.out.print("Remote Controller 'upVolume' method:");
+        if (checkIfDeviceConnected()) {
+            tvDevice.upVolume();
+        }
     }
 
     @Override
     public void downVolume() {
+        System.out.println();
+        System.out.print("Remote Controller 'downVolume' method:");
+        if (checkIfDeviceConnected()) {
+            tvDevice.downVolume();
+        }
 
     }
 
     @Override
     public void mute() {
+        System.out.println();
+        System.out.print("Remote Controller 'mute' method:");
+        if (checkIfDeviceConnected()) {
+            tvDevice.downVolume();
+        }
 
     }
 }
