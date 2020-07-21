@@ -28,6 +28,11 @@ public class TV extends TVDevice {
 
     @Override
     public void currentChannel() {
+        if (!isOn()) {
+            System.out.println("currentChannel action can't be performed, TV is OFF");
+            System.out.println();
+            return;
+        }
         System.out.println("Your current channel is: " + currentChanel);
         System.out.println();
     }
@@ -77,7 +82,7 @@ public class TV extends TVDevice {
             System.out.println();
             return;
         }
-        if (volumeLevel >= 0 && volumeLevel <= 0) {
+        if (volumeLevel >= 0 && volumeLevel <= 100) {
             volumeLevel++;
             System.out.println("Volume level increased successfully by 1 point");
         } else {

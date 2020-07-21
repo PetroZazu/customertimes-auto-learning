@@ -14,7 +14,6 @@ Example of the structure in the attachments.
 public class RemoteController implements Volume, Device {
     private TVDevice tvDevice;
 
-    //empty constructor, to declare RemoteController before connectDevice method call
     public RemoteController() {
 
     }
@@ -126,7 +125,7 @@ public class RemoteController implements Volume, Device {
         System.out.println();
         System.out.print("Remote Controller 'mute' method:");
         if (checkIfDeviceConnected()) {
-            tvDevice.downVolume();
+            tvDevice.mute();
         }
 
     }
