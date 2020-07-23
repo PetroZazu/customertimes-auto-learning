@@ -4,8 +4,8 @@ public class ElectroCar extends Car {
     private int batteryLevel;
 
 
-    public ElectroCar(String name, String size, int batteryLevel) {
-        super(name, size);
+    public ElectroCar(String name, String size, String typeOfTheCar, int batteryLevel) {
+        super(name, size, typeOfTheCar);
         this.batteryLevel = batteryLevel;
         if (this.batteryLevel > 100 || this.batteryLevel < 0) {
             System.out.println(" ERROR in the car:" + getName() + " - battery level should be entered in range from 0 to 100");
@@ -13,6 +13,8 @@ public class ElectroCar extends Car {
         }
 
     }
+
+
 
     @Override
     public void move(int velocity, int direction) {
@@ -39,8 +41,9 @@ public class ElectroCar extends Car {
         batteryLevel = 100;
         System.out.println("car stopped to charge and now is fully charged");
         showBatteryLevel();
-
     }
+
+
 
 
 }
