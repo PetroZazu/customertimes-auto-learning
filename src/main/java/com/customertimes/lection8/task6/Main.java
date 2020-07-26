@@ -30,7 +30,9 @@ public class Main {
         } catch (InputMismatchException iME) {
             System.out.println("Forbidden to add text, please provide numbers only");
             System.out.println("your already enter:");
-            System.out.println(list);
+            for (int n : list) {
+                System.out.println(n);
+            }
         }
     }
 
