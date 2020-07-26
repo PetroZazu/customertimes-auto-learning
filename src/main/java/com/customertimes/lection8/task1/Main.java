@@ -1,4 +1,5 @@
 package com.customertimes.lection8.task1;
+
 /*
 Create method to check:
 if number < 0 print “Number < 0”,

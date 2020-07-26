@@ -1,4 +1,5 @@
 package com.customertimes.lection7.task1;
+
 /*
 Create a new interface "Flyable". +
 This interface should have one method "void fly()". +

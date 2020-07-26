@@ -1,4 +1,5 @@
 package com.customertimes.lection7.task3;
+
 /*
 Create two interfaces Volume and State:
 interface Volume {
