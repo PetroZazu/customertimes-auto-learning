@@ -28,8 +28,6 @@ public class Main {
     }
 
     public static void iCanThrowException() throws NullPointerException {
-        NullPointerException Npe = new NullPointerException();
-        throw Npe;
-
+        throw new NullPointerException();
     }
 }
