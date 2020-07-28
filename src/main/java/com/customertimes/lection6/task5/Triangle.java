@@ -10,4 +10,8 @@ public class Triangle extends Figure {
     void calculateArea() {
         System.out.println("Triangle area is: " + (0.5 * getHeight() * getWidth()));
     }
+
+    public void printHello () {
+        System.out.println("hello!");
+    }
 }
