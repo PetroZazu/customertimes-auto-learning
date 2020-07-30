@@ -11,14 +11,17 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
         final String sp = File.separator;
-        Path srcPath = Paths.get
+        final Path srcPath = Paths.get
                 (System.getProperty("user.dir"));
 
-        Path pathInput = Paths.get
-                (srcPath + sp + "src" + sp + "main" + sp + "java" + sp + "com" + sp + "customertimes" + sp + "lection9" + sp + "inputData.txt");
+        String inputPath =
+                srcPath + sp + "src" + sp + "main" + sp + "java" + sp + "com" + sp + "customertimes" + sp + "lection9" + sp + "inputData.txt";
+        String outputPath =
+                srcPath + sp + "src" + sp + "main" + sp + "java" + sp + "com" + sp + "customertimes" + sp + "lection9" + sp + "outputData.txt";
 
-        Path pathOutput = Paths.get
-                (srcPath + sp + "src" + sp + "main" + sp + "java" + sp + "com" + sp + "customertimes" + sp + "lection9" + sp + "outputData.txt");
+
+        Path pathInput = Paths.get(inputPath);
+        Path pathOutput = Paths.get(outputPath);
 
         List<String> lines = Files.readAllLines(pathInput);
         List<String> outputLines = new ArrayList<>();
