@@ -1,5 +1,6 @@
 package com.customertimes.lection9;
 
+import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -8,8 +9,16 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        Path pathInput = Paths.get("C:\\Users\\petro.zazuliak\\Desktop\\inteliihProjects\\customertimes-auto-learning\\src\\main\\java\\com\\customertimes\\lection9\\inputData.txt");
-        Path pathOutput = Paths.get("C:\\Users\\petro.zazuliak\\Desktop\\inteliihProjects\\customertimes-auto-learning\\src\\main\\java\\com\\customertimes\\lection9\\outputData.txt");
+
+        final String sp = File.separator;
+        Path srcPath = Paths.get
+                (System.getProperty("user.dir"));
+
+        Path pathInput = Paths.get
+                (srcPath + sp + "src" + sp + "main" + sp + "java" + sp + "com" + sp + "customertimes" + sp + "lection9" + sp + "inputData.txt");
+
+        Path pathOutput = Paths.get
+                (srcPath + sp + "src" + sp + "main" + sp + "java" + sp + "com" + sp + "customertimes" + sp + "lection9" + sp + "outputData.txt");
 
         List<String> lines = Files.readAllLines(pathInput);
         List<String> outputLines = new ArrayList<>();
@@ -18,8 +27,10 @@ public class Main {
                 outputLines.add(lines.get(i));
             }
         }
-
         Files.write(pathOutput, outputLines);
+
+        byte[] bytes = Files.readAllBytes(pathOutput);
+        System.out.print(new String(bytes));
 
 
     }

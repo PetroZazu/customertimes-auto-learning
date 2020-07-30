@@ -2,8 +2,8 @@ package com.customertimes.lection7.task4;
 
 public class Main {
     public static void main(String[] args) {
-        TV tv = new TV("Abrakadabra", false);
-        TV tv2 = new TV("Dendy", false);
+        TVDevice tv = new TV("Abrakadabra", false);
+        TVDevice tv2 = new TV("Dendy", false);
 
         RemoteController rc = new RemoteController();
         RemoteController rc2 = new RemoteController(tv);
