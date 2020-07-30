@@ -21,6 +21,7 @@ public class RemoteController implements Volume, Device {
 
     public RemoteController(TVDevice yourTvDevice) {
         this.tvDevice = yourTvDevice;
+        System.out.println(tvDevice.getModelName() + "Connected automatically");
     }
 
     public void connectDevice(TVDevice yourTvDevice) {

@@ -1,0 +1,2 @@
+this file contains a lot of bugs, I want to catch all bugs.
+First I'm going to input this bug file, count bugs and then output results in another txt file :)ÿ
