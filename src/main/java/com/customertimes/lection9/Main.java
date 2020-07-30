@@ -14,7 +14,9 @@ public class Main {
         List<String> lines = Files.readAllLines(pathInput);
         List<String> outputLines = new ArrayList<>();
         for (int i = lines.size() - 1; i >= 0; i--) {
-            outputLines.add(lines.get(i));
+            if (!lines.get(i).endsWith("5")) {
+                outputLines.add(lines.get(i));
+            }
         }
 
         Files.write(pathOutput, outputLines);
