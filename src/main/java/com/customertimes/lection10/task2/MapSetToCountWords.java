@@ -12,7 +12,7 @@ public class MapSetToCountWords {
         // Create a scanner to add word that need to be counted in the text file
         Scanner sc = new Scanner(System.in);
         System.out.println("Please provide the Word that you want to count");
-        String uniqueWord = sc.nextLine();
+        String wordToCount = sc.nextLine();
 
 
         //find a path to imported file:
@@ -33,17 +33,17 @@ public class MapSetToCountWords {
         Map<String, Integer> counts = new HashMap<>();
 
         //Get all words to the list
-        for (String temp : lines) {
-            Collections.addAll(arrList, temp.split("\\W+"));
+        for (String linesWithWords : lines) {
+            Collections.addAll(arrList, linesWithWords.split("\\W+"));
         }
 
         //count words with map
-        for (String temp : arrList) {
-            counts.put(temp, counts.getOrDefault(uniqueWord, 0) + 1);
+        for (String separateWords : arrList) {
+            counts.put(separateWords, counts.getOrDefault(separateWords, 0) + 1);
         }
 
         //sout results :)
-        System.out.println(counts.get(uniqueWord) + " matches of " + uniqueWord);
+        System.out.println(counts.get(wordToCount) + " matches of " + "'"+wordToCount+"'");
 
     }
 }
